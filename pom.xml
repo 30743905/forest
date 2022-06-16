@@ -4,7 +4,7 @@
 
 	<groupId>com.dtflys.forest</groupId>
 	<artifactId>forest</artifactId>
-	<version>1.5.8</version>
+	<version>1.5.8_study</version>
 	<packaging>pom</packaging>
 	<name>forest</name>
 	<description>A easy HTTP client framework for Java</description>
@@ -82,7 +82,9 @@
 		<module>forest-spring</module>
 		<module>forest-spring-boot-starter</module>
 		<module>forest-mock</module>
-	</modules>
+        <module>forest-study</module>
+        <module>forest-server</module>
+    </modules>
 
 	<dependencies>
 
