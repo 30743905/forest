@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +25,8 @@ public class UserResource {
                 .setId("1")
                 .setName("zhangsan")
                 .setAge(10)
-                .setAddress("四川");
+                .setAddress("四川")
+                        .setBirthday("06/20/2022 5:36:33 下午");
 
         userMap.put(user.getId(), user);
     }
@@ -34,6 +36,12 @@ public class UserResource {
     public User getUser(@RequestParam("id") String id){
         log.info("receive queryById:{}", id);
         return userMap.get(id);
+    }
+
+    @GetMapping("/testzero")
+    public int getZero(@RequestParam("num") int num){
+        log.info("receive getZero:{}", num);
+        return 100/num;
     }
 
 }

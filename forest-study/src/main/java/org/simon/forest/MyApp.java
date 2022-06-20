@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @Configuration
@@ -17,5 +18,6 @@ public class MyApp {
      ConfigurableApplicationContext context = SpringApplication.run(MyApp.class, args);
      MyService service = context.getBean(MyService.class);
      service.testClient3();
+
     }
 }
